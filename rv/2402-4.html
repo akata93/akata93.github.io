@@ -24,11 +24,13 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
       var figura= new THREE.Shape();
-      figura.moveTo(10,10);
-      figura.lineTo(20,50);
-      figura.lineTo(20,100);
-      figura.lineTo(30,60);
-      figura.lineTo(10,10);
+      figura.moveTo(100,100);
+      figura.lineTo(150,100);
+      figura.lineTo(175,50);
+      figura.lineTo(200,100);
+      figura.lineTo(250,100);
+      figura.lineTo(175,200);
+      figura.lineTo(100,100);
     
       var forma = new THREE.ShapeGeometry(figura);
       var malla= new THREE.Mesh(forma);
