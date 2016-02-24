@@ -20,7 +20,6 @@
       var camara= new THREE.PerspectiveCamera(fov,aspect,near,far);
       camara.position.z= 5;
       
-      
       var renderer= new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
@@ -29,14 +28,7 @@
       var material = new THREE.MeshNormalMaterial( );
       var sphere = new THREE.Mesh( geometry, material );
       escena.add( sphere );
-      function render()
-      {
-        requestAnimationFrame(render);
-        sphere.rotation.x+=0.1;
-        sphere.rotation.y+=0.1;
-        renderer.render(escena,camara);
-      }
-      render();
+      
     </script>
   </body>
 </html>
