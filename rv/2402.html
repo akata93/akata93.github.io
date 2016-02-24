@@ -25,17 +25,11 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
     
-      var geometry = new THREE.SphereGeometry( 5, 32, 32 );
+      var geometry = new THREE.SphereGeometry( 1);
       var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
       var sphere = new THREE.Mesh( geometry, material );
       escena.add( sphere );
-      function render()
-      {
-        requestAnimationFrame(render);
-        cubo.rotation.x+=0.1;
-        cubo.rotation.y+=0.1;
-        renderer.render(escena,camara);
-      }
+      
       render();
     </script>
   </body>
