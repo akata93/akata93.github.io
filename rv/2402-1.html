@@ -26,11 +26,13 @@
     
       var geometry = new THREE.CylinderGeometry( 1,1,5);
       var material = new THREE.MeshNormalMaterial( );
-      var sphere = new THREE.Mesh( geometry, material );
-      escena.add( sphere );
+      var cilindro = new THREE.Mesh( geometry, material );
+      escena.add( cilindro );
       function render()
       {
         requestAnimationFrame(render);
+        cilindro.rotation.x+=0.1;
+        cilindro.rotation.y+=0.1;
         renderer.render(escena,camara);
       }
       render();
