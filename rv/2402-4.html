@@ -25,9 +25,10 @@
       document.body.appendChild(renderer.domElement);
       var figura= new THREE.Shape();
       figura.moveTo(10,10);
-      figura.moveTo(10,40);
-      figura.moveTo(40,40);
-      figura.moveTo(10,10);
+      figura.lineTo(20,50);
+      figura.lineTo(20,100);
+      figura.lineTo(30,60);
+      figura.lineTo(10,10);
     
       var forma = new THREE.ShapeGeometry(figura);
       var malla= new THREE.Mesh(forma);
