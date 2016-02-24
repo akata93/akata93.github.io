@@ -33,14 +33,14 @@
       var malla= new THREE.Mesh(forma);
       
       escena.add( malla );
-      function render()
+      function loop()
       {
-        requestAnimationFrame(render);
+        requestAnimationFrame(loop);
                 malla.rotation.x+=0.01;
         malla.rotation.y+=0.01;
         renderer.render(escena,camara);
       }
-      render();
+      loop();
       
     </script>
   </body>
