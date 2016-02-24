@@ -24,8 +24,8 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
     
-      var geometry = new THREE.CylinderGeometry( 1,1,5);
-      var material = new THREE.MeshNormalMaterial( );
+      var geometry = new THREE.CylinderGeometry( 1,1,10);
+      var material = new THREE.MeshDepthMaterial( );
       var cilindro = new THREE.Mesh( geometry, material );
       escena.add( cilindro );
       function render()
