@@ -23,3 +23,33 @@ function setup(){
   THREE.GeometryUtils.merge(forma, esfera2);
   THREE.GeometryUtils.merge(forma, cilindro);
   
+  // se genera la malla a partir de la forma nueva
+  
+  malla = new THREE.Mesh (forma);
+  
+  // se inicializa la escena y se agrega la malla a esta
+  
+  escena = new THREE.Scene();
+  escena.add(malla);
+   
+   //se inicializa la camara y el renderer
+   
+  camara= new THREE.PerspectiveCamera();
+  camara.position.z=10;
+  
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
+  document.body.appendChild (renderer.domElement);
+}
+
+function loop(){
+  malla.rotation.x=0.01;
+  malla.rotation.y=0.01;
+  renderer.render(escena , camara);
+}
+
+var escena,camara,renderer,malla;
+
+setup();
+loop();
+  
