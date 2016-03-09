@@ -3,7 +3,7 @@ function setup(){
   var material = new THREE.MeshLambertMaterial({color: '#0ff00C'});
   malla= new THREE.Mesh(forma, material);
   
-  var luzPuntual = new THREE.PointLight(0xCC00CC);
+  var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual.position.x=10;
   luzPuntual.position.y=10;
   luzPuntual.position.z=10;
