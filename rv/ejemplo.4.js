@@ -8,8 +8,14 @@ function setup(){
   luzPuntual.position.y=10;
   luzPuntual.position.z=10;
   
+  var luzPuntual1 = new THREE.PointLight(0xffff00);
+  luzPuntual.position.x=-10;
+  luzPuntual.position.y=-10;
+  luzPuntual.position.z=10;
+  
   escena = new THREE.Scene();
   escena.add(malla);
+  escena.add(luzPuntual);
   escena.add(luzPuntual);
   camara= new THREE.PerspectiveCamera();
   camara.position.z=5;
