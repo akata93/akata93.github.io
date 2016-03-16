@@ -1,9 +1,9 @@
 function setup(){
   THREE.ImageUtils.crossOrigin='';
   var textura = THREE.loadTexture('http://threejs.org/examples/textures/crate.gif');
-  var material = new THREE.MeshBasicMaterial({ map: textura})
-  var forma = new THREE.BoxGeometry(1,1,1)
-  malla= new THREE.Mesh (forma, material)
+  var material = new THREE.MeshBasicMaterial({ map: textura});
+  var forma = new THREE.BoxGeometry(1,1,1);
+  malla= new THREE.Mesh (forma, material);
   
   escena = new THREE.Scene();
   escena.add(malla);
