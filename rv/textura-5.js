@@ -4,6 +4,7 @@ function setup(){
   var material = new THREE.MeshPhongMaterial({ map: textura});
   var forma = new THREE.SphereGeometry(1,20,20);
   malla= new THREE.Mesh (forma, material);
+  malla.rotation.z+=0.25;
   
   var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual.position.x=10;
@@ -24,7 +25,7 @@ function setup(){
 
 function loop(){
   requestAnimationFrame(loop);
-  malla.rotation.z+=0.001;
+
   malla.rotation.y+=0.01;
   renderer.render(escena, camara);
 }
