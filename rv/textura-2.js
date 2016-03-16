@@ -1,12 +1,18 @@
 function setup(){
   THREE.ImageUtils.crossOrigin='';
-  var textura = THREE.loadTexture('http://threejs.org/examples/textures/crate.gif');
-  var material = new THREE.MeshBasicMaterial({ map: textura})
-  var forma = new THREE.BoxGeometry(1,1,1)
-  malla= new THREE.Mesh (forma, material)
+  var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
+  var material = new THREE.MeshLambertMaterial({ map: textura});
+  var forma = new THREE.BoxGeometry(1,4,9);
+  malla= new THREE.Mesh (forma, material);
+  
+  var luzPuntual = new THREE.PointLight(0xffffff);
+  luzPuntual.position.x=10;
+  luzPuntual.position.y=10;
+  luzPuntual.position.z=10;
   
   escena = new THREE.Scene();
   escena.add(malla);
+  escena.add(luzPuntual);
   
   camara= new THREE.PerspectiveCamera();
   camara.position.z=5;
