@@ -1,0 +1,95 @@
+<!doctype html>
+  <html>
+    <head>
+      <title>Leccion 24/02/16 Figuras complejas</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <style>
+      body {margin: 0;}
+      canvas {width: 100%; height: 100%}
+      </style>
+    </head>
+    <body>
+      <script src="three.min.js"></script>
+      <script>
+      
+      function setup(){
+        
+var figurabasepie=new THREE.Shape();
+        figurabasepie.moveTo(8,-35);
+        figurabasepie.lineTo(5,-32);
+        figurabasepie.lineTo(-5,-32);
+        figurabasepie.lineTo(-8,-35);
+        figurabasepie.lineTo(8,-35);
+        
+        var formabasepie=new THREE.ExtrudeGeometry(figurabasepie, {amount:10});
+        //Se plantean las geometrias a utilizar
+        
+        
+//SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+var cabezaForma=new THREE.SphereGeometry(15, 10, 10);
+
+//CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded, thetaStart, thetaLength)
+var cuerpoForma=new THREE.CylinderGeometry(15, 15, 40, 20, 4);
+var pie1Forma=new THREE.CylinderGeometry(5, 5, 10, 20, 4);
+
+
+//Para generar una forma combinada se requiere de las mallas para poder desplazar las formas en el espacio virtrual.
+
+var cabeza= new THREE.Mesh(cabezaForma);
+var cuerpo= new THREE.Mesh(cuerpoForma);
+var pie1=new THREE.Mesh(pie1Forma);
+var mallabasepie=new THREE.Mesh(formabasepie);
+
+//Se desplazan las mallas
+
+cabeza.position.y=20;
+pie1.position.y=-25;
+
+//Se genera una forma (geometria) abstracta.
+
+var forma= new THREE.Geometry();
+
+//Se utiliza el paquete GeometryUtils para conjuntar las formas.
+
+THREE.GeometryUtils.merge(forma,cabeza);
+THREE.GeometryUtils.merge(forma,cuerpo);
+THREE.GeometryUtils.merge(forma,pie1);
+THREE.GeometryUtils.merge(forma,formabasepie);
+
+//Se genera la malla a partir de la forma
+
+malla=new THREE.Mesh(forma);
+
+//Se inicializa la escena y se agrega la malla a ésta
+
+escena=new THREE.Scene();
+escena.add(malla);
+
+//Se inicializa la cámara y el renderer
+
+camara=new THREE.PerspectiveCamera();
+camara.position.z=100;
+
+renderer=new THREE.WebGLRenderer();
+renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+document.body.appendChild(renderer.domElement);
+}
+function loop(){
+  requestAnimationFrame(loop);
+  
+  //Es importante notar que las rotaciones son sobre los ejes que están fijos a la malla, nolos ejes del lienzo.
+  //inicialmente amnos coinciden.
+  
+  //malla.rotation.x+=0.01;
+  //malla.rotation.y+=0.01;
+  
+  renderer.render(escena,camara);
+  }
+  
+  var escena, camara, renderer, malla;
+  setup();
+  loop();
+  
+      </script>
+    </body>
+  </html>
