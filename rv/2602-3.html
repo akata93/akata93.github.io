@@ -24,23 +24,24 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
       var figura= new THREE.Shape();
-      figura.moveTo(10,10);
-      figura.lineTo(20,10);
-      figura.lineTo(20,50);
-      figura.lineTo(80,50);
-      figura.lineTo(80,10);
-      figura.lineTo(90,10);
-      figura.lineTo(90,100);
-      figura.lineTo(80,100);
-      figura.lineTo(80,60);
-      figura.lineTo(20,60);
-      figura.lineTo(20,100);
-      figura.lineTo(10,100);
-      figura.lineTo(10,10);
+      figura.moveTo(6,-25);
+      figura.lineTo(12,-15);
+      figura.lineTo(12,5);
+      figura.lineTo(10,5);
+      figura.lineTo(10,15);
+      figura.lineTo(12,17);
+      figura.lineTo(14,19);
+      figura.lineTo(16,19);
+      figura.lineTo(18,17);
+      figura.lineTo(20,15);
+      figura.lineTo(18,15);
+      figura.lineTo(18,-15);
+      figura.lineTo(24,-25);
+      figura.lineTo(6,-25);
       
       
     
-      var forma = new THREE.ExtrudeGeometry(figura, {amount:300});
+      var forma = new THREE.ExtrudeGeometry(figura, {amount:10});
       var malla= new THREE.Mesh(forma);
       
       escena.add( malla );
