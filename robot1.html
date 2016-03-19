@@ -40,8 +40,8 @@ var figurabasepie=new THREE.Shape();
       figbrazo.lineTo(24,-25);
       figbrazo.lineTo(6,-25);
       
-      var brazo1 = new THREE.ExtrudeGeometry(figbrazo, {amount:10});
-      var brazo2 = new THREE.ExtrudeGeometry(figbrazo, {amount:10});
+      var brazo1 = new THREE.ExtrudeGeometry(figbrazo, {amount:5});
+      var brazo2 = new THREE.ExtrudeGeometry(figbrazo, {amount:5});
         //Se plantean las geometrias a utilizar
         
         
@@ -66,8 +66,8 @@ var mallabrazo2= new THREE.Mesh(brazo2);
 
 cabeza.position.y=20;
 pie1.position.y=-25;
-mallabrazo1.position.x=8;
-mallabrazo2.position.x=-8;
+mallabrazo1.position.x=10;
+mallabrazo2.position.x=-10;
 
 //Se genera una forma (geometria) abstracta.
 
