@@ -59,6 +59,8 @@ var cabeza= new THREE.Mesh(cabezaForma);
 var cuerpo= new THREE.Mesh(cuerpoForma);
 var pie1=new THREE.Mesh(pie1Forma);
 var mallabasepie=new THREE.Mesh(formabasepie);
+var mallabrazo1= new THREE.Mesh(brazo1);
+var mallabrazo2= new THREE.Mesh(brazo2);
 
 //Se desplazan las mallas
 
@@ -77,6 +79,9 @@ THREE.GeometryUtils.merge(forma,cabeza);
 THREE.GeometryUtils.merge(forma,cuerpo);
 THREE.GeometryUtils.merge(forma,pie1);
 THREE.GeometryUtils.merge(forma,formabasepie);
+THREE.GeometryUtils.merge(forma,formab);
+THREE.GeometryUtils.merge(forma,brazo1);
+THREE.GeometryUtils.merge(forma,brazo2);
 
 //Se genera la malla a partir de la forma
 
