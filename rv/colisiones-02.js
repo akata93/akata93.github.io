@@ -28,7 +28,8 @@ function setup() {
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
   document.body.appendChild(renderer.domElement);
-  step=0.1;
+  step1=0.1;
+  step2=0.2;
 }
 function loop(){
   obstaculo1 = raycaster1.intersectObject(cubo1);
@@ -43,10 +44,12 @@ function loop(){
   if ((obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <=0.1))
   || (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5))|| (obstaculo4.length>0 && (obstaculo4[0].distance <=0.1))
   ||(obstaculo5.length>0 && (obstaculo5[0].distance <=0.5))||(obstaculo6.length>0 && (obstaculo6[0].distance <=0.5)))
-  step=-step;
+  {
+    step1=-step1;
+    step2=-step2;
   
-  pelota1.position.x+=step;
-  pelota2.position.x+=-step;
+  pelota1.position.x+=step1;
+  pelota2.position.x+=-step2;
   
   renderer.render(escena,camara);
   requestAnimationFrame(loop);
