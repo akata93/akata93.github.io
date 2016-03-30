@@ -12,7 +12,7 @@ function setup() {
   
   raycaster1= new THREE.Raycaster(pelota.position , new THREE.Vector3(1,0,0));
   raycaster2= new THREE.Raycaster(pelota.position , new THREE.Vector3(1,0,0));
-  raycaster.setFromCamera(new THREE.Vector2(0,0), camara);
+  
   
   escena=new THREE.Scene();
   escena.add(cubo1);
