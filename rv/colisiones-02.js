@@ -32,8 +32,8 @@ function setup() {
 }
 function loop(){
   obstaculo1 = raycaster1.intersectObject(cubo1);
-  obstaculo2 = raycaster2.intersectObject(pelota1);
-  obstaculo3 = raycaster3.intersectObject(cubo2);
+  obstaculo3 = raycaster2.intersectObject(pelota1);
+  obstaculo2 = raycaster3.intersectObject(cubo2);
   obstaculo4 = raycaster4.intersectObject(pelota2);
   
   if ((obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <=0.1))
