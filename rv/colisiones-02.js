@@ -11,7 +11,7 @@ function setup() {
   camara.position.z=20;
   
   raycaster1= new THREE.Raycaster(pelota.position , new THREE.Vector3(1,0,0));
-  raycaster2= new THREE.Raycaster(pelota.position , new THREE.Vector3(1,0,0));
+  raycaster2= new THREE.Raycaster(pelota.position , new THREE.Vector3(-1,0,0));
   
   
   escena=new THREE.Scene();
@@ -33,7 +33,8 @@ function loop(){
   step=-step;
   
   pelota.position.x+=step;
-  
+  raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
+  raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
   renderer.render(escena,camara);
   requestAnimationFrame(loop);
   
