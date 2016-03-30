@@ -44,12 +44,10 @@ function loop(){
   if ((obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <=0.1))
   || (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5))|| (obstaculo4.length>0 && (obstaculo4[0].distance <=0.1))
   ||(obstaculo5.length>0 && (obstaculo5[0].distance <=0.5))||(obstaculo6.length>0 && (obstaculo6[0].distance <=0.5)))
-  {
     step1=-step1;
-    step2=-step2;
-  }
+    
   pelota1.position.x+=step1;
-  pelota2.position.x+=-step2;
+  pelota2.position.x+=-step1;
   
   renderer.render(escena,camara);
   requestAnimationFrame(loop);
