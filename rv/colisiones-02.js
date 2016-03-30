@@ -41,7 +41,7 @@ function loop(){
   step=-step;
   
   pelota1.position.x+=step;
-  pelota2.position.x+=-step;
+  pelota2.position.x+=step;
   raycaster1.set(pelota1.position, new THREE.Vector3(1,0,0));
   raycaster2.set(pelota1.position, new THREE.Vector3(-1,0,0));
   raycaster3.set(pelota2.position, new THREE.Vector3(1,0,0));
