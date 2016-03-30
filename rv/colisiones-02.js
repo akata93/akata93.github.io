@@ -47,7 +47,7 @@ function loop(){
   {
     step1=-step1;
     step2=-step2;
-  
+  }
   pelota1.position.x+=step1;
   pelota2.position.x+=-step2;
   
