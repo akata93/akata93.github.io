@@ -52,8 +52,8 @@ var mallabrazo2= new THREE.Mesh(brazo2);
 
 cabeza.position.y=20;
 pie1.position.y=-25;
-mallabrazo1.position.x=10;
-mallabrazo2.position.x=-10;
+mallabrazo1.position.x=15;
+mallabrazo2.position.x=-15;
 
 
 
@@ -67,8 +67,8 @@ THREE.GeometryUtils.merge(forma,cabeza);
 THREE.GeometryUtils.merge(forma,cuerpo);
 THREE.GeometryUtils.merge(forma,pie1);
 THREE.GeometryUtils.merge(forma,formabasepie);
-THREE.GeometryUtils.merge(forma,mallabrazo1);
-THREE.GeometryUtils.merge(forma,mallabrazo2);
+THREE.GeometryUtils.merge(forma,brazo1);
+THREE.GeometryUtils.merge(forma,brazo2);
 
 //Se genera la malla a partir de la forma
 
