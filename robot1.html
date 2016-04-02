@@ -13,7 +13,7 @@
       <script>
       
       function setup(){
-        var material = new THREE.MeshPhongMaterial({color: 0xdddddd, specular: 0x009900, shininess: 80, shading: THREE.FlatShading });
+        var material = new THREE.MeshPhongMaterial({color: 0x2194ce, specular: 0x009900, shininess: 80, shading: THREE.FlatShading });
         
 var figurabasepie=new THREE.Shape();
         figurabasepie.moveTo(8,-35);
@@ -74,14 +74,14 @@ malla=new THREE.Mesh(forma, material);
 //Se inicializa la escena y se agrega la malla a 
 
 var luzPuntual = new THREE.PointLight(0xffffff);
-  luzPuntual.position.x=100;
-  luzPuntual.position.y=100;
-  luzPuntual.position.z=100;
+  luzPuntual.position.x=500;
+  luzPuntual.position.y=500;
+  luzPuntual.position.z=500;
   
   var luzPuntual1 = new THREE.PointLight(0xffff00);
-  luzPuntual.position.x=-100;
-  luzPuntual.position.y=-100;
-  luzPuntual.position.z=100;
+  luzPuntual.position.x=-500;
+  luzPuntual.position.y=-500;
+  luzPuntual.position.z=-500;
 
 escena=new THREE.Scene();
 escena.add(malla);
