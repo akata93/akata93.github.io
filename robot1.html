@@ -23,25 +23,11 @@ var figurabasepie=new THREE.Shape();
         
         var formabasepie=new THREE.ExtrudeGeometry(figurabasepie, {amount:10});
         
-        var figbrazo= new THREE.Shape();
-      figbrazo.moveTo(16,0,-35);
-      figbrazo.lineTo(22,0,-25);
-      figbrazo.lineTo(22,0,-5);
-      figbrazo.lineTo(20,0,-5);
-      figbrazo.lineTo(20,0,5);
-      figbrazo.lineTo(22,0,7);
-      figbrazo.lineTo(24,0,9);
-      figbrazo.lineTo(26,0,9);
-      figbrazo.lineTo(28,0,7);
-      figbrazo.lineTo(30,0,5);
-      figbrazo.lineTo(30,0,-5);
-      figbrazo.lineTo(28,0,-5);
-      figbrazo.lineTo(28,0,-25);
-      figbrazo.lineTo(34,0,-35);
-      figbrazo.lineTo(16,0,-35);
       
-      var brazo1 = new THREE.ExtrudeGeometry(figbrazo, {amount:5});
-      var brazo2 = new THREE.ExtrudeGeometry(figbrazo, {amount:5});
+      var brazo1 = new THREE.CylinderGeometry( 5, 5, 40, 32 );
+      var brazo2 = new THREE.CylinderGeometry( 5, 5, 40, 32 );
+      
+      
         //Se plantean las geometrias a utilizar
         
         
@@ -66,8 +52,10 @@ var mallabrazo2= new THREE.Mesh(brazo2);
 
 cabeza.position.y=20;
 pie1.position.y=-25;
+mallabrazo1.position.x=10;
+mallabrazo2.position.x=-10;
 
-mallabrazo1.rotation.z+=0.5;
+
 
 //Se genera una forma (geometria) abstracta.
 
@@ -79,8 +67,8 @@ THREE.GeometryUtils.merge(forma,cabeza);
 THREE.GeometryUtils.merge(forma,cuerpo);
 THREE.GeometryUtils.merge(forma,pie1);
 THREE.GeometryUtils.merge(forma,formabasepie);
-THREE.GeometryUtils.merge(forma,brazo1);
-THREE.GeometryUtils.merge(forma,brazo2);
+THREE.GeometryUtils.merge(forma,mallabrazo1);
+THREE.GeometryUtils.merge(forma,mallabrazo2);
 
 //Se genera la malla a partir de la forma
 
