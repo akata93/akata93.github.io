@@ -13,7 +13,9 @@
       <script>
       
       function setup(){
-        var material = new THREE.MeshPhongMaterial({color: 0xdddddd, specular: 0x009900, shininess: 80, shading: THREE.FlatShading });
+        THREE.ImageUtils.crossOrigin='';
+  var textura = THREE.ImageUtils.loadTexture('http://akata93.github.io/r2d2.jpg');
+        var material = new THREE.MeshPhongMaterial({textura });
         
 var figurabasepie=new THREE.Shape();
         figurabasepie.moveTo(8,-35);
