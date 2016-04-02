@@ -63,12 +63,12 @@ var forma= new THREE.Geometry();
 
 //Se utiliza el paquete GeometryUtils para conjuntar las formas.
 
-THREE.GeometryUtils.merge(forma,cabeza);
-THREE.GeometryUtils.merge(forma,cuerpo);
-THREE.GeometryUtils.merge(forma,pie1);
-THREE.GeometryUtils.merge(forma,mallabasepie);
-THREE.GeometryUtils.merge(forma,brazo1);
-THREE.GeometryUtils.merge(forma,brazo2);
+THREE.Geometry.merge(forma,cabeza);
+THREE.Geometry.merge(forma,cuerpo);
+THREE.Geometry.merge(forma,pie1);
+THREE.Geometry.merge(forma,mallabasepie);
+THREE.Geometry.merge(forma,brazo1);
+THREE.Geometry.merge(forma,brazo2);
 
 //Se genera la malla a partir de la forma
 
