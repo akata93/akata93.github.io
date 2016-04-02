@@ -54,21 +54,15 @@ cabeza.position.y=20;
 pie1.position.y=-25;
 mallabrazo1.position.z=15;
 mallabrazo2.position.z=-15;
-
-
-
 //Se genera una forma (geometria) abstracta.
-
 var forma= new THREE.Geometry();
-
 //Se utiliza el paquete GeometryUtils para conjuntar las formas.
-
-THREE.Geometry.merge(forma,cabeza);
-THREE.Geometry.merge(forma,cuerpo);
-THREE.Geometry.merge(forma,pie1);
-THREE.Geometry.merge(forma,mallabasepie);
-THREE.Geometry.merge(forma,brazo1);
-THREE.Geometry.merge(forma,brazo2);
+THREE.GeometryUtils.merge(forma,cabezaForma);
+THREE.GeometryUtils.merge(forma,cuerpoForma);
+THREE.GeometryUtils.merge(forma,pie1Forma);
+THREE.GeometryUtils.merge(forma,formabasepie);
+THREE.GeometryUtils.merge(forma,brazo1);
+THREE.GeometryUtils.merge(forma,brazo2);
 
 //Se genera la malla a partir de la forma
 
