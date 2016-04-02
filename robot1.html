@@ -24,8 +24,8 @@ var figurabasepie=new THREE.Shape();
         var formabasepie=new THREE.ExtrudeGeometry(figurabasepie, {amount:10});
         
       
-      var brazo1 = new THREE.CylinderGeometry( 5, 5, 60, 32 );
-      var brazo2 = new THREE.CylinderGeometry( 5, 5, 60, 32 );
+      var brazo1 = new THREE.CylinderGeometry( 5, 5, 50, 32 );
+      var brazo2 = new THREE.CylinderGeometry( 5, 5, 50, 32 );
       
       
         //Se plantean las geometrias a utilizar
@@ -52,8 +52,10 @@ var mallabrazo2= new THREE.Mesh(brazo2);
 
 cabeza.position.y=20;
 pie1.position.y=-25;
-mallabrazo1.position.z=15;
-mallabrazo2.position.z=-15;
+mallabrazo1.position.x=15;
+mallabrazo2.position.x=-15;
+mallabrazo1.position.y=-5;
+mallabrazo2.position.y=-5;
 //Se genera una forma (geometria) abstracta.
 var forma= new THREE.Geometry();
 //Se utiliza el paquete GeometryUtils para conjuntar las formas.
