@@ -13,6 +13,7 @@
       <script>
       
       function setup(){
+        var material = new THREE.MeshPhongMaterial({color: '#2194ce'});
         
 var figurabasepie=new THREE.Shape();
         figurabasepie.moveTo(8,-35);
@@ -41,12 +42,12 @@ var pie1Forma=new THREE.CylinderGeometry(5, 5, 10, 20, 4);
 
 //Para generar una forma combinada se requiere de las mallas para poder desplazar las formas en el espacio virtrual.
 
-var cabeza= new THREE.Mesh(cabezaForma);
-var cuerpo= new THREE.Mesh(cuerpoForma);
-var pie1=new THREE.Mesh(pie1Forma);
-var mallabasepie=new THREE.Mesh(formabasepie);
-var mallabrazo1= new THREE.Mesh(brazo1);
-var mallabrazo2= new THREE.Mesh(brazo2);
+var cabeza= new THREE.Mesh(cabezaForma,material);
+var cuerpo= new THREE.Mesh(cuerpoForma,material);
+var pie1=new THREE.Mesh(pie1Forma,material);
+var mallabasepie=new THREE.Mesh(formabasepie,material);
+var mallabrazo1= new THREE.Mesh(brazo1,material);
+var mallabrazo2= new THREE.Mesh(brazo2,material);
 
 //Se desplazan las mallas
 
