@@ -25,19 +25,19 @@ var figurabasepie=new THREE.Shape();
         var formabasepie=new THREE.ExtrudeGeometry(figurabasepie, {amount:10});
         
       
-      var brazo1 = new THREE.CylinderGeometry( 4, 4, 50, 32 );
-      var brazo2 = new THREE.CylinderGeometry( 4, 4, 50, 32 );
+      var brazo1 = new THREE.CylinderGeometry( 4, 4, 50, 100 );
+      var brazo2 = new THREE.CylinderGeometry( 4, 4, 50, 100 );
       
       
         //Se plantean las geometrias a utilizar
         
         
 //SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
-var cabezaForma=new THREE.SphereGeometry(15, 10, 10);
+var cabezaForma=new THREE.SphereGeometry(15, 100, 100);
 
 //CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded, thetaStart, thetaLength)
-var cuerpoForma=new THREE.CylinderGeometry(15, 15, 40, 20, 4);
-var pie1Forma=new THREE.CylinderGeometry(5, 5, 10, 20, 4);
+var cuerpoForma=new THREE.CylinderGeometry(15, 15, 40, 100, 10);
+var pie1Forma=new THREE.CylinderGeometry(5, 5, 10, 100, 10);
 
 
 //Para generar una forma combinada se requiere de las mallas para poder desplazar las formas en el espacio virtrual.
