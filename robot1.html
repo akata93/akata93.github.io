@@ -74,14 +74,14 @@ malla=new THREE.Mesh(forma, material);
 //Se inicializa la escena y se agrega la malla a 
 
 var luzPuntual = new THREE.PointLight(0xffffff);
-  luzPuntual.position.x=10;
-  luzPuntual.position.y=10;
-  luzPuntual.position.z=10;
+  luzPuntual.position.x=100;
+  luzPuntual.position.y=100;
+  luzPuntual.position.z=100;
   
   var luzPuntual1 = new THREE.PointLight(0xffff00);
-  luzPuntual.position.x=-10;
-  luzPuntual.position.y=-10;
-  luzPuntual.position.z=10;
+  luzPuntual.position.x=-100;
+  luzPuntual.position.y=-100;
+  luzPuntual.position.z=100;
 
 escena=new THREE.Scene();
 escena.add(malla);
