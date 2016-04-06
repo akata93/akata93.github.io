@@ -11,8 +11,8 @@ var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 
 var Pared1= new THREE.Mesh(pared, material2);
 var Pared2= new THREE.Mesh(pared, material2);
-var Pared3= new THREE.Mesh(pared1, material2);
-var Pared4= new THREE.Mesh(pared1, material2);
+var Pared3= new THREE.Mesh(pared, material2);
+var Pared4= new THREE.Mesh(pared, material2);
 
 Pared1.position.x=250;
 Pared2.position.x=-250;
