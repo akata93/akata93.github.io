@@ -25,7 +25,7 @@
         
 //SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
-var pared=new THREE.BoxGeometry(500, 100, 10);
+var pared=new THREE.BoxGeometry(100, 100, 10);
 
 var ladrillo = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
   var material2 = new THREE.MeshNormalMaterial();
@@ -82,7 +82,7 @@ escena.add(Pared4);
 //Se inicializa la cámara y el renderer
 camara=new THREE.PerspectiveCamera();
 camara.position.z=1000;
-camara.position.y=1000;
+
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
