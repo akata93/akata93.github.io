@@ -69,8 +69,8 @@ escena.add(Pared3);
 escena.add(Pared4);
 //Se inicializa la cámara y el renderer
 camara=new THREE.PerspectiveCamera();
-camara.position.z=1500;
-camara.position.x=800;
+camara.position.z=1100;
+camara.position.x=900;
 
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
@@ -79,6 +79,7 @@ document.body.appendChild(renderer.domElement);
 function loop(){
   requestAnimationFrame(loop);
   camara.rotation.y = 30 * Math.PI / 180;
+  camara.rotation.z = 30 * Math.PI / 180;
 
   
   renderer.render(escena,camara);
