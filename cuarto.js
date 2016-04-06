@@ -9,10 +9,26 @@ var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 var Pared1= new THREE.Mesh(pared, material2);
 
 Pared1.position.x=250;
+var luzPuntual = new THREE.PointLight(0xffffff);
+  luzPuntual.position.x=500;
+  luzPuntual.position.y=500;
+  luzPuntual.position.z=500;
+  
+  var luzPuntual1 = new THREE.PointLight(0xffffff);
+  luzPuntual1.position.x=-500;
+  luzPuntual1.position.y=-500;
+  luzPuntual1.position.z=500;
+  var luzPuntual2 = new THREE.PointLight(0xffffff);
+  luzPuntual2.position.x=0;
+  luzPuntual2.position.y=500;
+  luzPuntual2.position.z=0;
 
 escena=new THREE.Scene();
 
 escena.add(Pared1);
+escena.add(luzPuntual);
+escena.add(luzPuntual1);
+escena.add(luzPuntual2);
 //escena.add(Pared2);
 //escena.add(Pared3);
 //escena.add(Pared4);
