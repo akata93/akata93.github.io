@@ -34,7 +34,7 @@ escena.add(luzPuntual2);
 //escena.add(Pared4);
 
 camara=new THREE.PerspectiveCamera();
-camara.position.z=1100;
+camara.position.z=1500;
 //camara.position.x=900;
 
 renderer=new THREE.WebGLRenderer();
