@@ -7,8 +7,10 @@ var ladrillo = THREE.ImageUtils.loadTexture('http://threejs.org/examples/texture
 var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 
 var Pared1= new THREE.Mesh(pared, material2);
+var Pared2= new THREE.Mesh(pared, material2);
 
 Pared1.position.x=250;
+Pared1.position.x=-250;
 var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual.position.x=500;
   luzPuntual.position.y=500;
@@ -29,7 +31,7 @@ escena.add(Pared1);
 escena.add(luzPuntual);
 escena.add(luzPuntual1);
 escena.add(luzPuntual2);
-//escena.add(Pared2);
+escena.add(Pared2);
 //escena.add(Pared3);
 //escena.add(Pared4);
 
