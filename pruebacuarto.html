@@ -89,17 +89,12 @@ document.body.appendChild(renderer.domElement);
 }
 function loop(){
   requestAnimationFrame(loop);
-  
-  //Es importante notar que las rotaciones son sobre los ejes que están fijos a la malla, nolos ejes del lienzo.
-  //inicialmente amnos coinciden.
-  
-  malla.rotation.y+=0.01;
-  //malla.rotation.y+=0.01;
+
   
   renderer.render(escena,camara);
   }
   
-  var escena, camara, renderer, malla;
+  var escena, camara, renderer;
   setup();
   loop();
   
