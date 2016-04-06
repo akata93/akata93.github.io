@@ -22,9 +22,9 @@ Pared4.position.z=-250;
 escena=new THREE.Scene();
 
 escena.add(Pared1);
-escena.add(Pared2);
-escena.add(Pared3);
-escena.add(Pared4);
+//escena.add(Pared2);
+//escena.add(Pared3);
+//escena.add(Pared4);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=1100;
