@@ -28,7 +28,7 @@
 var pared=new THREE.BoxGeometry(500, 100, 10);
 
 var ladrillo = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
-  var material2 = new THREE.MeshNormalMaterial({map: ladrillo });
+  var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 //Para generar una forma combinada se requiere de las mallas para poder desplazar las formas en el espacio virtrual.
 
 var Pared1= new THREE.Mesh(pared, material2);
