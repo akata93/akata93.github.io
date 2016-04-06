@@ -37,10 +37,12 @@ var figurabasepie=new THREE.Shape();
 //SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 var cabezaForma=new THREE.SphereGeometry(15, 100, 100);
 
-
+var pared=new THREE.BoxGeometry(500, 100, 10);
 //CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded, thetaStart, thetaLength)
 var cuerpoForma=new THREE.CylinderGeometry(15, 15, 40, 100, 10);
 var pie1Forma=new THREE.CylinderGeometry(5, 5, 10, 100, 10);
+var ladrillo = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
+  var material2 = new THREE.MeshLambertMaterial({ map: ladrillo});
 
 
 //Para generar una forma combinada se requiere de las mallas para poder desplazar las formas en el espacio virtrual.
@@ -51,6 +53,11 @@ var pie1=new THREE.Mesh(pie1Forma,material);
 var mallabasepie=new THREE.Mesh(formabasepie,material);
 var mallabrazo1= new THREE.Mesh(brazo1,material);
 var mallabrazo2= new THREE.Mesh(brazo2,material);
+var Pared1= new THREE.Mesh(pared, material2);
+var Pared2= new THREE.Mesh(pared, material2);
+var Pared3= new THREE.Mesh(pared, material2);
+var Pared4= new THREE.Mesh(pared, material2);
+
 
 //Se desplazan las mallas
 
@@ -60,6 +67,26 @@ mallabrazo1.position.x=18;
 mallabrazo2.position.x=-18;
 mallabrazo1.position.y=-10;
 mallabrazo2.position.y=-10;
+
+Pared1.position.x=250;
+Pared1.position.x=-250;
+Pared1.position.z=250;
+Pared1.position.z=-250;
+
+Pared2.position.x=250;
+Pared2.position.x=-250;
+Pared2.position.z=250;
+Pared2.position.z=-250;
+
+Pared3.position.x=250;
+Pared3.position.x=-250;
+Pared3.position.z=250;
+Pared3.position.z=-250;
+
+Pared4.position.x=250;
+Pared4.position.x=-250;
+Pared4.position.z=250;
+Pared4.position.z=-250;
 //Se genera una forma (geometria) abstracta.
 var forma= new THREE.Geometry();
 //Se utiliza el paquete GeometryUtils para conjuntar las formas.
@@ -69,6 +96,7 @@ THREE.GeometryUtils.merge(forma,pie1);
 THREE.GeometryUtils.merge(forma,formabasepie);
 THREE.GeometryUtils.merge(forma,mallabrazo1);
 THREE.GeometryUtils.merge(forma,mallabrazo2);
+
 
 //Se genera la malla a partir de la forma
 
@@ -95,6 +123,10 @@ escena.add(malla);
 escena.add(luzPuntual);
 escena.add(luzPuntual1);
 escena.add(luzPuntual2);
+escena.add(Pared1);
+escena.add(Pared2);
+escena.add(Pared3);
+escena.add(Pared4);
 
 //Se inicializa la cámara y el renderer
 
