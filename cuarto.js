@@ -1,23 +1,14 @@
 function setup(){
 
 THREE.ImageUtils.crossOrigin='';
-var textura = THREE.ImageUtils.loadTexture('http://akata93.github.io/r2d2.jpg');
-var material = new THREE.MeshPhongMaterial({map: textura });
-var pared=new THREE.BoxGeometry(500, 100, 10);
-var pared1=new THREE.BoxGeometry(10, 100, 500);
 
+var pared=new THREE.BoxGeometry(500, 100, 10);
 var ladrillo = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
 var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 
 var Pared1= new THREE.Mesh(pared, material2);
-var Pared2= new THREE.Mesh(pared, material2);
-var Pared3= new THREE.Mesh(pared, material2);
-var Pared4= new THREE.Mesh(pared, material2);
 
 Pared1.position.x=250;
-Pared2.position.x=-250;
-Pared3.position.z=250;
-Pared4.position.z=-250;
 
 escena=new THREE.Scene();
 
