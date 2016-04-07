@@ -36,9 +36,9 @@ escena.add(Pared2);
 //escena.add(Pared4);
 
 camara=new THREE.PerspectiveCamera();
-camara.position.z=1500;
-camara.position.y=-900;
-camara.rotation.x = 20 * Math.PI / 180;
+camara.position.z=3000;
+//camara.position.y=;
+camara.rotation.x = -90 * Math.PI / 180;
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
