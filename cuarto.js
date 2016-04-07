@@ -93,7 +93,7 @@ camara.position.y = 600 ;
 //camara.position.y=;
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight,window.innerWidth);
+renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
 document.body.appendChild(renderer.domElement);
 }
 
