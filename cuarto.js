@@ -29,6 +29,7 @@ var luzPuntual = new THREE.PointLight(0xffffff);
 escena=new THREE.Scene();
 
 escena.add(Pared1);
+escena.add(Pared2);
 escena.add(luzPuntual);
 escena.add(luzPuntual1);
 escena.add(luzPuntual2);
