@@ -35,10 +35,12 @@ escena=new THREE.Scene();
 
 escena.add(Pared1);
 escena.add(Pared2);
+escena.add(Pared3);
+escena.add(Pared4);
 escena.add(luzPuntual);
 escena.add(luzPuntual1);
 escena.add(luzPuntual2);
-escena.add(Pared2);
+
 //escena.add(Pared3);
 //escena.add(Pared4);
 
