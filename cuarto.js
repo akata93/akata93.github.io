@@ -3,6 +3,7 @@ function setup(){
 THREE.ImageUtils.crossOrigin='';
 
 var pared=new THREE.BoxGeometry(500, 100, 10);
+var pared_1=new THREE.BoxGeometry(10, 100, 500);
 var ladrillo = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
 var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 
@@ -10,7 +11,7 @@ var Pared1= new THREE.Mesh(pared, material2);
 var Pared2= new THREE.Mesh(pared, material2);
 
 Pared1.position.z=250;
-Pared1.position.z=-250;
+Pared2.position.z=-250;
 var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual.position.x=500;
   luzPuntual.position.y=500;
