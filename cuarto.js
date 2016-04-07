@@ -13,9 +13,9 @@ var Pared3= new THREE.Mesh(pared_1, material2);
 var Pared4= new THREE.Mesh(pared_1, material2);
 
 Pared1.position.z=250;
-Pared1.position.z=-250;
+Pared2.position.z=-250;
 Pared3.position.x=250;
-Pared3.position.x=-250;
+Pared4.position.x=-250;
 
 var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual.position.x=500;
