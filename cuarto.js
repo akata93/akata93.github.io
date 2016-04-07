@@ -36,7 +36,7 @@ escena.add(Pared2);
 //escena.add(Pared4);
 
 camara=new THREE.PerspectiveCamera();
-camara.rotation.x = 90 * Math.PI / 180;
+//camara.rotation.x = 90 * Math.PI / 180;
 camara.position.z=1500;
 //camara.position.y=;
 
