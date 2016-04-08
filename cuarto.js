@@ -104,6 +104,8 @@ renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
 document.body.appendChild(renderer.domElement);
 
+
+
 step2=1;
 }
 
@@ -136,7 +138,12 @@ function loop(){
      marca=0;
      }
   }
-  if (marca==1)
+  if (marca==0)
+  {
+   // malla.rotation.y=90 * Math.PI / 180;
+    malla.position.z+=step;
+  }
+  else if (marca==1)
     {
     raycaster.set(malla.position, new THREE.Vector3(1,0,0));
     malla.rotation.y=90 * Math.PI / 180;
@@ -168,7 +175,7 @@ function loop(){
   renderer.render(escena,camara);
 }
   
-var escena, camara, renderer, malla, marca;
+var escena, camara, renderer, malla, marca, raycaster;
 marca=0;
 setup();
 loop();
