@@ -9,10 +9,10 @@ var material2 = new THREE.MeshLambertMaterial({map: ladrillo });
 var textura = THREE.ImageUtils.loadTexture('http://akata93.github.io/r2d2.jpg');
 var material = new THREE.MeshPhongMaterial({map: textura });
 
-var Pared1= new THREE.Mesh(pared, material2);
-var Pared2= new THREE.Mesh(pared, material2);
-var Pared3= new THREE.Mesh(pared_1, material2);
-var Pared4= new THREE.Mesh(pared_1, material2);
+Pared1= new THREE.Mesh(pared, material2);
+Pared2= new THREE.Mesh(pared, material2);
+Pared3= new THREE.Mesh(pared_1, material2);
+Pared4= new THREE.Mesh(pared_1, material2);
 
 var figurabasepie=new THREE.Shape();
 figurabasepie.moveTo(8,-35);
@@ -111,7 +111,7 @@ step=1;
 function loop(){
   requestAnimationFrame(loop);
   obstaculo1 = raycaster1.intersectObject(Pared1);
-  obstaculo2 = raycaster2.intersectObject(Pared3);
+  obstaculo2 = raycaster2.intersectObject(Pared2);
   obstaculo3 = raycaster3.intersectObject(Pared3);
   obstaculo4 = raycaster4.intersectObject(Pared4);
   
@@ -147,6 +147,7 @@ function loop(){
   
 var escena, camara, renderer, malla, marca, raycaster;
 var raycaster1, raycaster2, raycaster3, raycaster4;
+var Pared1, Pared2, Pared3, Pared4;
 marca=0;
 setup();
 loop();
