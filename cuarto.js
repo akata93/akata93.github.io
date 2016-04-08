@@ -136,8 +136,8 @@ function loop(){
   else if (marca==4){
   malla.position.z+=step;
   }
-  else
-  malla.position.z+=-step;
+  //else
+  //alla.position.z+=-step;
   raycaster1.set(malla.position,new THREE.Vector3(0,0,-1) );
   raycaster2.set(malla.position,new THREE.Vector3(1,0,0) );
   raycaster3.set(malla.position,new THREE.Vector3(0,0,1) );
