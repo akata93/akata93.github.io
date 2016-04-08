@@ -107,15 +107,7 @@ step2=0.2;
 }
 
 function loop(){
-  obstaculo1 = raycaster1.intersectObject(cubo1);
-  obstaculo2 = raycaster2.intersectObject(pelota1);
-  obstaculo3 = raycaster3.intersectObject(cubo2);
-  obstaculo4 = raycaster4.intersectObject(pelota2);
-  obstaculo5 = raycaster2.intersectObject(cubo2);
-  //obstaculo5 = raycaster2.intersectObject(pelota2);
-  obstaculo6 = raycaster4.intersectObject(cubo1);
-  //obstaculo7 = raycaster4.intersectObject(pelota1);
-  requestAnimationFrame(loop);
+  
   malla.rotation.y+=0.01;
   //camara.rotation.y = 20 * Math.PI / 180;
   //camara.rotation.z = 10 * Math.PI / 180;
