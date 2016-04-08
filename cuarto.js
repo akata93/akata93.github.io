@@ -74,10 +74,10 @@ var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual2.position.z=0;
 
 raycaster= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,1));  
-raycaster1= new THREE.Raycaster(malla.position , new THREE.Vector3(1,0,0));
-  raycaster2= new THREE.Raycaster(malla.position, new THREE.Vector3(-1,0,0));
+raycaster1= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,-1));
+  raycaster2= new THREE.Raycaster(malla.position, new THREE.Vector3(1,0,0));
   raycaster3= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,1));
-  raycaster4= new THREE.Raycaster(malla.position, new THREE.Vector3(0,0,-1));
+  raycaster4= new THREE.Raycaster(malla.position, new THREE.Vector3(-1,0,0));
   
 
 escena=new THREE.Scene();
