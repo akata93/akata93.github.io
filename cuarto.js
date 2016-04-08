@@ -123,17 +123,17 @@ function loop(){
   if (marca==0){
     malla.position.z+=-step;
   }
-  else if (marca==1){
+  if (marca==1){
   malla.position.x+=step;
   }
-  else if (marca==2){
+  if (marca==2){
     
   malla.position.z+=step;
   }
-  else if (marca==3){
+  if (marca==3){
   malla.position.x+=-step;
   }
-  else if (marca==4){
+  if (marca==4){
   malla.position.z+=step;
   }
   //else
