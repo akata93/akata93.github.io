@@ -113,31 +113,7 @@ function loop(){
   requestAnimationFrame(loop);
   
   var intersects = raycaster.intersectObjects(escena.children);
-  if (intersects.length>0)
-  {
-    marca=marca+1;
-    if (marca==1)
-    {
-    raycaster.set(malla.position, new THREE.Vector3(1,0,0));
-    malla.rotation.y=90 * Math.PI / 180;
-    }
-    else if (marca==2)
-    {
-     raycaster.set(malla.position, new THREE.Vector3(0,0,-1));
-     malla.rotation.y=90 * Math.PI / 180;
-    }
-     else if (marca==3)
-     {
-     raycaster.set(malla.position, new THREE.Vector3(1,0,0));
-     malla.rotation.y=90 * Math.PI / 180;
-     }
-     else if (marca==4)
-     {
-     raycaster.set(malla.position, new THREE.Vector3(0,0,1));
-     malla.rotation.y=90 * Math.PI / 180;
-     marca=0;
-     }
-  }
+  if (intersects.length>0) marca=marca+1;
   if (marca==0)
   {
    // malla.rotation.y=90 * Math.PI / 180;
