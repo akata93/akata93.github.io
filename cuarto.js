@@ -124,7 +124,7 @@ function loop(){
     malla.position.x+=-step;
   }
   if (marca==1){
-  malla.position.x+=step;
+  malla.position.z+=-step;
   }
   if (marca==2){
     
