@@ -106,7 +106,7 @@ document.body.appendChild(renderer.domElement);
 
 
 
-step2=1;
+step=1;
 }
 
 function loop(){
