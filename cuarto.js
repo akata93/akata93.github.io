@@ -75,11 +75,10 @@ var luzPuntual = new THREE.PointLight(0xffffff);
 
 raycaster= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,1));  
 raycaster1= new THREE.Raycaster(malla.position , new THREE.Vector3(1,0,0));
-raycaster2= new THREE.Raycaster(malla.position , new THREE.Vector3(-1,0,0));
-raycaster3= new THREE.Raycaster(malla.position , new THREE.Vector3(0,1,0));
-raycaster4= new THREE.Raycaster(malla.position , new THREE.Vector3(0,-1,0));
-raycaster5= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,1));
-raycaster6= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,-1));
+  raycaster2= new THREE.Raycaster(malla.position, new THREE.Vector3(-1,0,0));
+  raycaster3= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,1));
+  raycaster4= new THREE.Raycaster(malla.position, new THREE.Vector3(0,0,-1));
+  
 
 escena=new THREE.Scene();
 escena.add(malla);
@@ -104,54 +103,50 @@ renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
 document.body.appendChild(renderer.domElement);
 
-
+raycaster.set(malla.position, new THREE.Vector3(1,0,0));
 
 step=1;
 }
 
 function loop(){
   requestAnimationFrame(loop);
+  obstaculo1 = raycaster1.intersectObject(Pared1);
+  obstaculo2 = raycaster2.intersectObject(Pared3);
+  obstaculo3 = raycaster3.intersectObject(Pared3);
+  obstaculo4 = raycaster4.intersectObject(Pared4);
   
-  var intersects = raycaster.intersectObjects(escena.children);
-  if (intersects.length>0) marca=marca+1;
-  if (marca==0)
-  {
-   // malla.rotation.y=90 * Math.PI / 180;
-    malla.position.z+=step;
+  if ((obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <=0.5))
+  || (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5))|| (obstaculo4.length>0 && (obstaculo4[0].distance <=0.5))
+  )
+    marca=marca+1;
+    
+  if (marca==0){
+    malla.position.z+=-step;
   }
-  else if (marca==1)
-    {
-    raycaster.set(malla.position, new THREE.Vector3(1,0,0));
-    malla.rotation.y=90 * Math.PI / 180;
-    malla.position.x+=step;
-    }
-    else if (marca==2)
-    {
-     raycaster.set(malla.position, new THREE.Vector3(0,0,-1));
-     malla.rotation.y=90 * Math.PI / 180;
-     malla.position.z+=-step;
-    }
-     else if (marca==3)
-     {
-     raycaster.set(malla.position, new THREE.Vector3(1,0,0));
-     malla.rotation.y=90 * Math.PI / 180;
-     malla.position.x+=-step;
-     }
-     else if (marca==4)
-     {
-     raycaster.set(malla.position, new THREE.Vector3(0,0,1));
-     malla.rotation.y=90 * Math.PI / 180;
-     malla.position.z+=step;
-     marca=0;
-     }
+  else if (marca==1){
+  malla.position.x+=step;
+  }
+  else if (marca==2){
+    
+  malla.position.z+=step;
+  }
+  else if (marca==3){
+  malla.position.x+=-step;
+  }
+  else if (marca==4){
+  malla.position.z+=step;
+  }
+  else
+  malla.position.z+=-step;
+  
  
-  //malla.rotation.y+=0.01;
-  //camara.rotation.y = 20 * Math.PI / 180;
-  //camara.rotation.z = 10 * Math.PI / 180;
   renderer.render(escena,camara);
 }
+
+
   
 var escena, camara, renderer, malla, marca, raycaster;
+var raycaster1, raycaster2, raycaster3, raycaster4;
 marca=0;
 setup();
 loop();
