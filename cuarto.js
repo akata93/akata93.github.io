@@ -72,7 +72,8 @@ var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual2.position.x=0;
   luzPuntual2.position.y=500;
   luzPuntual2.position.z=0;
-  
+
+raycaster= new THREE.Raycaster(malla.position , new THREE.Vector3(0,0,1));  
 raycaster1= new THREE.Raycaster(malla.position , new THREE.Vector3(1,0,0));
 raycaster2= new THREE.Raycaster(malla.position , new THREE.Vector3(-1,0,0));
 raycaster3= new THREE.Raycaster(malla.position , new THREE.Vector3(0,1,0));
@@ -108,13 +109,67 @@ step2=0.2;
 
 function loop(){
   requestAnimationFrame(loop);
-  malla.rotation.y+=0.01;
+  
+  var intersects = raycaster.intersectObjects(escena.children);
+  if (intersects.length>0)
+  {
+    marca=marca+1;
+    if (marca==1)
+    {
+    raycaster.set(malla.position, new THREE.Vector3(1,0,0));
+    malla.rotation.y=90 * Math.PI / 180;
+    }
+    else if (marca==2)
+    {
+     raycaster.set(malla.position, new THREE.Vector3(0,0,-1));
+     malla.rotation.y=90 * Math.PI / 180;
+    }
+     else if (marca==3)
+     {
+     raycaster.set(malla.position, new THREE.Vector3(1,0,0));
+     malla.rotation.y=90 * Math.PI / 180;
+     }
+     else if (marca==4)
+     {
+     raycaster.set(malla.position, new THREE.Vector3(0,0,1));
+     malla.rotation.y=90 * Math.PI / 180;
+     marca=0;
+     }
+  }
+  if (marca==1)
+    {
+    raycaster.set(malla.position, new THREE.Vector3(1,0,0));
+    malla.rotation.y=90 * Math.PI / 180;
+    malla.position.x+=step;
+    }
+    else if (marca==2)
+    {
+     raycaster.set(malla.position, new THREE.Vector3(0,0,-1));
+     malla.rotation.y=90 * Math.PI / 180;
+     malla.position.z+=-step;
+    }
+     else if (marca==3)
+     {
+     raycaster.set(malla.position, new THREE.Vector3(1,0,0));
+     malla.rotation.y=90 * Math.PI / 180;
+     malla.position.x+=-step;
+     }
+     else if (marca==4)
+     {
+     raycaster.set(malla.position, new THREE.Vector3(0,0,1));
+     malla.rotation.y=90 * Math.PI / 180;
+     malla.position.z+=step;
+     marca=0;
+     }
+ 
+  //malla.rotation.y+=0.01;
   //camara.rotation.y = 20 * Math.PI / 180;
   //camara.rotation.z = 10 * Math.PI / 180;
   renderer.render(escena,camara);
 }
   
-var escena, camara, renderer, malla;
+var escena, camara, renderer, malla, marca;
+marca=0;
 setup();
 loop();
   
