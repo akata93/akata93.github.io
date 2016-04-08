@@ -110,9 +110,9 @@ step=1;
 
 function loop(){
   requestAnimationFrame(loop);
-  obstaculo1 = raycaster1.intersectObject(Pared1);
+  obstaculo1 = raycaster1.intersectObject(Pared3);
   obstaculo2 = raycaster2.intersectObject(Pared2);
-  obstaculo3 = raycaster3.intersectObject(Pared3);
+  obstaculo3 = raycaster3.intersectObject(Pared1);
   obstaculo4 = raycaster4.intersectObject(Pared4);
   
   if ((obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <=0.5))
