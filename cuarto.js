@@ -107,7 +107,7 @@ step2=0.2;
 }
 
 function loop(){
-  
+  requestAnimationFrame(loop);
   malla.rotation.y+=0.01;
   //camara.rotation.y = 20 * Math.PI / 180;
   //camara.rotation.z = 10 * Math.PI / 180;
