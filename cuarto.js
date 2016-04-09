@@ -114,30 +114,30 @@ function loop(){
   obstaculo2 = raycaster2.intersectObject(Pared3);
   obstaculo3 = raycaster3.intersectObject(Pared1);
   obstaculo4 = raycaster4.intersectObject(Pared4);
-  
-  if ((obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <=0.5))
-  || (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5))|| (obstaculo4.length>0 && (obstaculo4[0].distance <=0.5))
-  )
-    marca=marca+1;
-    
-  if (marca==0){
+  if (marca<1){
+    malla.position.x+=0;
+    malla.position.z+=-step;
+  }
+  if (obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)){
+    malla.position.x+=step;
+    malla.position.z+=0;
+    marca=1;
+  }
+  if (obstaculo2.length>0 && (obstaculo2[0].distance <=0.5)){
+    malla.position.x+=0;
+    malla.position.z+=step;
+    marca=1;
+  }
+  if (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5)){
     malla.position.x+=-step;
+    malla.position.z+=0;
+    marca=1;
   }
-  if (marca==1){
-  malla.position.y+=step;
+  if (obstaculo4.length>0 && (obstaculo4[0].distance <=0.5)){
+    malla.position.x+=0;
+    malla.position.z+=-step;
+    marca=1;
   }
-  if (marca==2){
-    
-  malla.position.z+=step;
-  }
-  if (marca==3){
-  malla.position.x+=-step;
-  }
-  if (marca==4){
-  malla.position.z+=step;
-  }
-  //else
-  //alla.position.z+=-step;
   raycaster1.set(malla.position,new THREE.Vector3(0,0,-1) );
   raycaster2.set(malla.position,new THREE.Vector3(1,0,0) );
   raycaster3.set(malla.position,new THREE.Vector3(0,0,1) );
