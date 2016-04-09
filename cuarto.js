@@ -119,7 +119,7 @@ function loop(){
     malla.position.z+=-step;
   }
   if (obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)){
-    malla.position.x+=step;
+    malla.position.z+=step;
     //malla.position.z+=0;
     marca=1;
   }
