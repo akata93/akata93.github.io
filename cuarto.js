@@ -115,26 +115,26 @@ function loop(){
   obstaculo3 = raycaster3.intersectObject(Pared1);
   obstaculo4 = raycaster4.intersectObject(Pared4);
   if (marca<1){
-    malla.position.x+=0;
+    
     malla.position.z+=-step;
   }
   if (obstaculo1.length>0 && (obstaculo1[0].distance <=0.5)){
     malla.position.x+=step;
-    malla.position.z+=0;
+    //malla.position.z+=0;
     marca=1;
   }
   if (obstaculo2.length>0 && (obstaculo2[0].distance <=0.5)){
-    malla.position.x+=0;
+    //malla.position.x+=0;
     malla.position.z+=step;
     marca=1;
   }
   if (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5)){
     malla.position.x+=-step;
-    malla.position.z+=0;
+   // malla.position.z+=0;
     marca=1;
   }
   if (obstaculo4.length>0 && (obstaculo4[0].distance <=0.5)){
-    malla.position.x+=0;
+   // malla.position.x+=0;
     malla.position.z+=-step;
     marca=1;
   }
