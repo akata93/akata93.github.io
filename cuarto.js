@@ -129,13 +129,13 @@ function loop(){
     marca=1;
   }
   if (obstaculo3.length>0 && (obstaculo3[0].distance <=0.5)){
-    malla.position.x+=-step;
+    malla.position.z+=step;
    // malla.position.z+=0;
     marca=1;
   }
   if (obstaculo4.length>0 && (obstaculo4[0].distance <=0.5)){
    // malla.position.x+=0;
-    malla.position.z+=-step;
+    malla.position.z+=step;
     marca=1;
   }
   raycaster1.set(malla.position,new THREE.Vector3(0,0,-1) );
