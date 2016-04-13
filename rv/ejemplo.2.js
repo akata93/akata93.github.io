@@ -54,3 +54,17 @@ function setup(){
   
   environment.add(camera);
 }
+
+function loop(){
+  requestAnimationFrame(loop);
+  environment.sense();
+  environment.plan();
+  environment.act();
+  
+  renderer.render(environment, camera);
+}
+
+var environment, camera, renderer;
+
+setup();
+loop();
