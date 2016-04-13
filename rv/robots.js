@@ -1,3 +1,8 @@
+function Sensor(position, direction){
+	THREE.Raycaster.call(this,position,ditection);
+	this.colision=false;
+}
+Sensor.prototype=new THREE.Raycaster();
 function Robot(size,x,y){
 	Agent.call(this,x,y);
 
@@ -37,7 +42,7 @@ Robot.prototype.plan=function(environment){
 Robot.prototype.act= function (environment){
   var command= this.actuator.commands.pop();
   console.log('Undefined command');
-  else if (command in this operations)
+  if (command in this operations)
   this.operations[command](this);
   else
   console.log('Unknown command');
