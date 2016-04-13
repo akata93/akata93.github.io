@@ -25,6 +25,15 @@ Robot.prototype.sense=function(environment){
 	else
 		this.sensor.colision=false;
 };
+Robot.prototype.plan=function(environment){
+	this.actuator.commands=[];
+
+	if(this.sensor.colision==true)
+	this.actuator.commands.push('rotateCCW');
+	else
+	this.actuator.commands.push('goStraight');
+};
+
 Robot.prototype.act= function (environment){
   var command= this.actuator.commands.pop();
   console.los('Undefined command');
