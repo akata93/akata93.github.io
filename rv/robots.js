@@ -1,5 +1,5 @@
 function Sensor(position, direction){
-	THREE.Raycaster.call(this,position,ditection);
+	THREE.Raycaster.call(this,position,direction);
 	this.colision=false;
 }
 Sensor.prototype=new THREE.Raycaster();
@@ -49,7 +49,7 @@ Robot.prototype.act= function (environment){
   console.log('Unknown command');
 };
 
-Robot.prototype.operations()={ };
+Robot.prototype.operations={ };
 Robot.prototype.operations.goStraight= function(robot,distance){
   if (distance===undefined)
   distance=0.05;
