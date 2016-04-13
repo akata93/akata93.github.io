@@ -24,15 +24,15 @@ Environment.prototype.sense=function();{
 
 Environment.prototype.plan=function();{
 	for(var i=0; i<this.children.length; i++;){
-	if(this.children[i].sense !==undefined)
-	this.children[i].sense(this);
+	if(this.children[i].plan !==undefined)
+	this.children[i].plan(this);
 	}
 }
 
 
 Environment.prototype.act=function();{
 	for(var i=0; i<this.children.length; i++;){
-	if(this.children[i].sense !==undefined)
-	this.children[i].sense(this);
+	if(this.children[i].act !==undefined)
+	this.children[i].act(this);
 	}
 }
