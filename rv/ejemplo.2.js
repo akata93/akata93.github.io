@@ -50,6 +50,7 @@ function setup(){
   camera=new THREE.PerspectiveCamera();
   camera.position.z=30;
   renderer= new THREE.WebGLRenderer();
+  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
   
   environment.add(camera);
