@@ -3,7 +3,7 @@ function Robot(size,x,y){
 }
 
 	this.sensor=new Sensor();
-	this.actuato= new THREE.Mesh(
+	this.actuator= new THREE.Mesh(
 	new THREE.BoxGeometry(size,size,size),
 		new THREE.MeshBasicMaterial({color: '#aa0000'}));
 	this.actuator.commands=[];
@@ -29,7 +29,7 @@ Robot.prototype.plan=function(environment){
 	this.actuator.commands=[];
 
 	if(this.sensor.colision==true)
-	this.actuator.commands.push('rotateCCW');
+	this.actuator.commands.push('rotateCW');
 	else
 	this.actuator.commands.push('goStraight');
 };
