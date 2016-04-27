@@ -1,6 +1,6 @@
 function setup(){
 
-THREE.ImageUtils.crossOrigin='';
+new THREE.ImageUtils.crossOrigin='';
 
 var pared=new THREE.BoxGeometry(500, 100, 10);
 var pared_1=new THREE.BoxGeometry(10, 100, 500);
