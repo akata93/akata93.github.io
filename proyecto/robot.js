@@ -90,8 +90,9 @@ escena.add(luzPuntual2);
 
 camara=new THREE.PerspectiveCamera();
 //camara.rotation.x = 90 * Math.PI / 180;
-camara.position.z=1500;
+//camara.position.z=1500;
 camara.position.y = 600 ;  
+camara.rotation.x=-1.57;
 //camara.position.y=;
 
 renderer=new THREE.WebGLRenderer();
