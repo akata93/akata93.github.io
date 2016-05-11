@@ -86,19 +86,20 @@ escena.add(Pared4);
 //escena.add(luzPuntual1);
 //escena.add(luzPuntual2);
 
-spotLight = new THREE.SpotLight(0xffffff,4,100,0.5,0.5,0);
-spotLight.position.set(malla.position,new THREE.Vector3(1,0,0));
 
-spotLight.castShadow = true;
+//spotLight = new THREE.SpotLight(0xffffff,4,100,0.5,0.5,0);
+//spotLight.position.set(malla.position,new THREE.Vector3(1,0,0));
 
-spotLight.shadow.mapSize.width = 1024;
-spotLight.shadow.mapSize.height = 1024;
+//spotLight.castShadow = true;
 
-spotLight.shadow.camera.near = 500;
-spotLight.shadow.camera.far = 4000;
-spotLight.shadow.camera.fov = 30;
+//spotLight.shadow.mapSize.width = 1024;
+//spotLight.shadow.mapSize.height = 1024;
 
-escena.add( spotLight );
+//spotLight.shadow.camera.near = 500;
+//spotLight.shadow.camera.far = 4000;
+//spotLight.shadow.camera.fov = 30;
+
+//escena.add( spotLight );
 
 camara=new THREE.PerspectiveCamera();
 //camara.rotation.x = 90 * Math.PI / 180;
