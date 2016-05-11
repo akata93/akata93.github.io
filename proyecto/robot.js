@@ -91,7 +91,7 @@ escena.add(luzPuntual2);
 camara=new THREE.PerspectiveCamera();
 
 camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
-camera.position.x = 0;
+camera.rotation.x = -1.2;
 camera.position.y = 450;
 camera.position.z = 200;
 //camara.rotation.x = 90 * Math.PI / 180;
