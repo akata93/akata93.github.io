@@ -89,6 +89,11 @@ escena.add(luzPuntual2);
 //escena.add(Pared4);
 
 camara=new THREE.PerspectiveCamera();
+
+camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
+camera.position.x = 200;
+camera.position.y = 100;
+camera.position.z = 200;
 //camara.rotation.x = 90 * Math.PI / 180;
 //camara.position.z=1500;
 camara.position.y = 600 ;  
@@ -145,12 +150,13 @@ function loop(){
   else if(dir==4){
     malla.position.z-=step;
   }
-  if (keyboard.pressed("P")) malla.position.y=200;
-  renderer.render(escena,camara);
+  if (keyboard.pressed("P")) renderer.render(escena,camera);
+  else renderer.render(escena,camara);
+  
   requestAnimationFrame(loop);
 }
   
-var escena, camara, renderer, malla;
+var escena, camara, renderer, malla, camera;
 var raycaster;
 var dir; 
 var Pared1,Pared2,Pared3,Pared4;
