@@ -152,10 +152,11 @@ function loop(){
   }
   if (keyboard.pressed("P")) {
     
-    var timer = Date.now() * 0.0001;
+    var timer = Date.now() * 0.001;
 
 				camera.position.x = Math.cos( timer ) * 200;
 				camera.position.z = Math.sin( timer ) * 200;
+				camera.rotation.y = Math.sin( timer ) * 200*0.1;
   renderer.render(escena,camera);
   }
   else renderer.render(escena,camara);
