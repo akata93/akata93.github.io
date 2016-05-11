@@ -155,6 +155,7 @@ var raycaster;
 var dir; 
 var Pared1,Pared2,Pared3,Pared4;
 var obspared1,obspared2,obspared3,obspared4;
+var keyboard    = new THREEx.KeyboardState();
 dir=1;
 setup();
 loop();
