@@ -59,7 +59,7 @@ Pared2.position.z=-250;
 Pared3.position.x=250;
 Pared4.position.x=-250;
 
-/*
+
   var luzPuntual = new THREE.PointLight(0xffffff);
   luzPuntual.position.x=500;
   luzPuntual.position.y=500;
@@ -73,7 +73,7 @@ Pared4.position.x=-250;
   luzPuntual2.position.x=0;
   luzPuntual2.position.y=500;
   luzPuntual2.position.z=0;
-*/
+
 raycaster1= new THREE.Raycaster(malla.position , new THREE.Vector3(1,0,0));
 
 escena=new THREE.Scene();
@@ -82,9 +82,9 @@ escena.add(Pared1);
 escena.add(Pared2);
 escena.add(Pared3);
 escena.add(Pared4);
-//escena.add(luzPuntual);
-//escena.add(luzPuntual1);
-//escena.add(luzPuntual2);
+escena.add(luzPuntual);
+escena.add(luzPuntual1);
+escena.add(luzPuntual2);
 
 
 //spotLight = new THREE.SpotLight(0xffffff,4,100,0.5,0.5,0);
@@ -165,7 +165,9 @@ function loop(){
     malla.position.z-=step;
     malla.rotation.y=-180*(Math.PI)/180;
   }
- 
+  
+  if (keyboard.pressed("P"))  malla.position.y=200;
+  
   renderer.render(escena,camara);
   requestAnimationFrame(loop);
 }
@@ -176,6 +178,7 @@ var spotLight
 var dir; 
 var Pared1,Pared2,Pared3,Pared4;
 var obspared1,obspared2,obspared3,obspared4;
+var keyboard= new THREEx.KeyboardState();
 dir=1;
 setup();
 loop();
