@@ -150,7 +150,14 @@ function loop(){
   else if(dir==4){
     malla.position.z-=step;
   }
-  if (keyboard.pressed("P")) renderer.render(escena,camera);
+  if (keyboard.pressed("P")) {
+    
+    var timer = Date.now() * 0.0001;
+
+				camera.position.x = Math.cos( timer ) * 200;
+				camera.position.z = Math.sin( timer ) * 200;
+  renderer.render(escena,camera);
+  }
   else renderer.render(escena,camara);
   
   requestAnimationFrame(loop);
