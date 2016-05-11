@@ -156,7 +156,7 @@ function loop(){
 
 				camera.position.x = Math.cos( timer ) * 200;
 				camera.position.z = Math.sin( timer ) * 200;
-				camera.rotation.y = Math.sin( timer ) * 200*0.1;
+				//camera.rotation.y = Math.sin( timer ) * 200*0.1;
   renderer.render(escena,camera);
   }
   else renderer.render(escena,camara);
