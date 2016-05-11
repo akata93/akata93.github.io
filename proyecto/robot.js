@@ -145,7 +145,7 @@ function loop(){
   else if(dir==4){
     malla.position.z-=step;
   }
- 
+  if (keyboard.pressed("P")) malla.position.y=200;
   renderer.render(escena,camara);
   requestAnimationFrame(loop);
 }
