@@ -183,26 +183,26 @@ function loop(){
     
      malla.position.x+=step;
      malla.rotation.y=90*(Math.PI)/180;
-     camara.position.x =malla.position.x-100;
+     camara.position.x =malla.position.x-200;
 camara.position.z= malla.position.z;
   }
   else if(dir==2){
      malla.position.z+=step;
      malla.rotation.y=180*(Math.PI)/180;
      camara.position.x =malla.position.x;
-camara.position.z= malla.position.z-100;
+camara.position.z= malla.position.z-200;
   }
   else if(dir==3){
     malla.position.x-=step;
     malla.rotation.y=-90*(Math.PI)/180;
-    camara.position.x =malla.position.x+100;
+    camara.position.x =malla.position.x+200;
 camara.position.z= malla.position.z;
   }
   else if(dir==4){
     malla.position.z-=step;
     malla.rotation.y=-180*(Math.PI)/180;
     camara.position.x =malla.position.x;
-camara.position.z= malla.position.z+100;
+camara.position.z= malla.position.z+200;
   }
   var timer = Date.now() * 0.0001;
 
@@ -211,7 +211,7 @@ camara.position.z= malla.position.z+100;
 //				camara.lookAt( escena.position );
 //camara.position.x =malla.position.x+50;
 //				camara.position.z= malla.position.z+50;
-camara.position.y = 10 ;  
+camara.position.y = 110 ;  
 camara.rotation.x=0;
 camara.lookAt( malla.position );
   if (keyboard.pressed("P")) {
