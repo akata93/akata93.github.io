@@ -157,12 +157,15 @@ function loop(){
   else if(dir==4){
     malla.position.z-=step;
   }
+  var timer = Date.now() * 0.0001;
+
 camara.position.x = Math.cos( timer ) * 200;
 				camara.position.z = Math.sin( timer ) * 200;
 				camara.lookAt( escena.position );
   if (keyboard.pressed("P")) {
     
-    
+    var timer = Date.now() * 0.0001;
+
 				camera.position.x = Math.cos( timer ) * 200;
 				camera.position.z = Math.sin( timer ) * 200;
 				camera.lookAt( escena.position );
