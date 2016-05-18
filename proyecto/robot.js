@@ -103,7 +103,7 @@ camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidt
 camara.position.y = 800 ;  
 camara.rotation.x=-1.57;
 
-camera.position.y = 600 ;  
+camera.position.y = 500 ;  
 camera.rotation.x=-1.57;
 //camara.position.y=;
 
