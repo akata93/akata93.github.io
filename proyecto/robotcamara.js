@@ -205,11 +205,11 @@ function loop(){
 //camara.position.x = Math.cos( timer ) * 200;
 //				camara.position.z = Math.sin( timer ) * 200;
 //				camara.lookAt( escena.position );
-camara.position.x =malla.position.x;
-				camara.position.z= malla.position.z;
-				camara.position.y = 20 ;  
+camara.position.x =malla.position.x+50;
+				camara.position.z= malla.position.z+50;
+				camara.position.y = 10 ;  
 				camara.rotation.x=0;
-				camara.lookAt( or );
+				camara.lookAt( malla.position );
   if (keyboard.pressed("P")) {
     
     var timer = Date.now() * 0.0001;
