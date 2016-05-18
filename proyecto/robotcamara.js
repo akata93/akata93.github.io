@@ -103,7 +103,7 @@ for (var i = 0; i < 10; i++) {
     
     basecuadro[h].position.x=offsetx;
     basecuadro[h].position.z=offsetz;
-    basecuadro[h].position.y=-50;
+    basecuadro[h].position.y=-70;
     offsetx=offsetx+50;
     escena.add(basecuadro[h]);
     h=h+1;
