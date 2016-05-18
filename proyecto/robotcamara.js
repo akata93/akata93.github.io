@@ -198,15 +198,20 @@ function loop(){
   }
   var timer = Date.now() * 0.0001;
 
-camara.position.x = Math.cos( timer ) * 200;
-				camara.position.z = Math.sin( timer ) * 200;
-				camara.lookAt( escena.position );
+//camara.position.x = Math.cos( timer ) * 200;
+//				camara.position.z = Math.sin( timer ) * 200;
+//				camara.lookAt( escena.position );
+camara.position.x =malla.position.x;
+				camara.position.z= malla.position.z;
+				camara.position.y = 20 ;  
+				camara.rotation.x=0;
+				camara.lookAt( malla.position );
   if (keyboard.pressed("P")) {
     
     var timer = Date.now() * 0.0001;
 
-				//camera.position.x = Math.cos( timer ) * 200;
-				//camera.position.z = Math.sin( timer ) * 200;
+				camera.position.x = Math.cos( timer ) * 200;
+				camera.position.z = Math.sin( timer ) * 200;
 				camera.position.x =malla.position.x;
 				camera.position.z= malla.position.z;
 				camera.position.y = 20 ;  
