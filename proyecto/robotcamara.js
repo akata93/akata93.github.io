@@ -2,8 +2,8 @@ function setup(){
 
 THREE.ImageUtils.crossOrigin='';
 
-var pared=new THREE.BoxGeometry(500, 100, 10);
-var pared_1=new THREE.BoxGeometry(10, 100, 500);
+var pared=new THREE.BoxGeometry(500, 10, 10);
+var pared_1=new THREE.BoxGeometry(10, 10, 500);
 var base=new THREE.BoxGeometry(50,50,50);
 var marmol=THREE.ImageUtils.loadTexture('http://jruben-fgonzalez.github.io/rv/marmol.jpg');
 var madera=THREE.ImageUtils.loadTexture('http://jruben-fgonzalez.github.io/rv/madera.jpg');
