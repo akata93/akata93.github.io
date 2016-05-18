@@ -183,26 +183,26 @@ function loop(){
     
      malla.position.x+=step;
      malla.rotation.y=90*(Math.PI)/180;
-     camara.position.x =malla.position.x+10;
+     camara.position.x =malla.position.x-100;
 camara.position.z= malla.position.z;
   }
   else if(dir==2){
      malla.position.z+=step;
      malla.rotation.y=180*(Math.PI)/180;
      camara.position.x =malla.position.x;
-camara.position.z= malla.position.z+10;
+camara.position.z= malla.position.z-100;
   }
   else if(dir==3){
     malla.position.x-=step;
     malla.rotation.y=-90*(Math.PI)/180;
-    camara.position.x =malla.position.x-10;
+    camara.position.x =malla.position.x+100;
 camara.position.z= malla.position.z;
   }
   else if(dir==4){
     malla.position.z-=step;
     malla.rotation.y=-180*(Math.PI)/180;
     camara.position.x =malla.position.x;
-camara.position.z= malla.position.z-10;
+camara.position.z= malla.position.z+100;
   }
   var timer = Date.now() * 0.0001;
 
