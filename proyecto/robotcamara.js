@@ -183,29 +183,37 @@ function loop(){
     
      malla.position.x+=step;
      malla.rotation.y=90*(Math.PI)/180;
+     camara.position.x =malla.position.x+10;
+camara.position.z= malla.position.z;
   }
   else if(dir==2){
      malla.position.z+=step;
      malla.rotation.y=180*(Math.PI)/180;
+     camara.position.x =malla.position.x;
+camara.position.z= malla.position.z+10;
   }
   else if(dir==3){
     malla.position.x-=step;
     malla.rotation.y=-90*(Math.PI)/180;
+    camara.position.x =malla.position.x-10;
+camara.position.z= malla.position.z;
   }
   else if(dir==4){
     malla.position.z-=step;
     malla.rotation.y=-180*(Math.PI)/180;
+    camara.position.x =malla.position.x;
+camara.position.z= malla.position.z-10;
   }
   var timer = Date.now() * 0.0001;
 
 //camara.position.x = Math.cos( timer ) * 200;
 //				camara.position.z = Math.sin( timer ) * 200;
 //				camara.lookAt( escena.position );
-camara.position.x =malla.position.x+50;
-				camara.position.z= malla.position.z+50;
-				camara.position.y = 10 ;  
-				camara.rotation.x=0;
-				camara.lookAt( malla.position );
+//camara.position.x =malla.position.x+50;
+//				camara.position.z= malla.position.z+50;
+camara.position.y = 10 ;  
+camara.rotation.x=0;
+camara.lookAt( malla.position );
   if (keyboard.pressed("P")) {
     
     var timer = Date.now() * 0.0001;
