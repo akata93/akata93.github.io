@@ -154,9 +154,9 @@ function loop(){
     
     var timer = Date.now() * 0.001;
 
-				//camera.position.x = Math.cos( timer ) * 200;
-				camera.position.z = Math.sin( timer ) * 200;
-				camera.rotation.y=Math.sin( timer )*10 ;
+				camera.position.x = malla.position.x+100;
+				camera.position.z = malla.position.z+100;
+				//camera.rotation.y=Math.sin( timer )*10 ;
 				//camera.rotation.y = Math.sin( timer ) * 200*0.1;
   renderer.render(escena,camera);
   }
