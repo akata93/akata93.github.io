@@ -95,13 +95,13 @@ camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidt
 //camera.position.y = 350;
 //camera.position.z = 100;
 
-camara.rotation.x = -.85;
-camara.position.y = 350;
-camara.position.z = 100;
+//camara.rotation.x = -.85;
+//camara.position.y = 350;
+//camara.position.z = 100;
 //camara.rotation.x = 90 * Math.PI / 180;
 //camara.position.z=1500;
-//camara.position.y = 600 ;  
-//camara.rotation.x=-1.57;
+camara.position.y = 600 ;  
+camara.rotation.x=-1.57;
 
 camera.position.y = 600 ;  
 camera.rotation.x=-1.57;
@@ -161,8 +161,9 @@ function loop(){
     
     var timer = Date.now() * 0.001;
 
-				camera.position.x = malla.position.x+100;
-				camera.position.z = malla.position.z+100;
+				//camera.position.x = malla.position.x+100;
+				
+				//camera.position.z = malla.position.z+100;
 				//camera.rotation.y=Math.sin( timer )*10 ;
 				//camera.rotation.y = Math.sin( timer ) * 200*0.1;
   renderer.render(escena,camera);
