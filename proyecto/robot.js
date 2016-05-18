@@ -91,17 +91,20 @@ escena.add(luzPuntual2);
 camara=new THREE.PerspectiveCamera();
 
 camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
-camera.rotation.x = -.85;
-camera.position.y = 350;
-camera.position.z = 100;
+//camera.rotation.x = -.85;
+//camera.position.y = 350;
+//camera.position.z = 100;
 
 camara.rotation.x = -.85;
 camara.position.y = 350;
 camara.position.z = 100;
 //camara.rotation.x = 90 * Math.PI / 180;
 //camara.position.z=1500;
-camara.position.y = 600 ;  
-camara.rotation.x=-1.57;
+//camara.position.y = 600 ;  
+//camara.rotation.x=-1.57;
+
+camera.position.y = 600 ;  
+camera.rotation.x=-1.57;
 //camara.position.y=;
 
 renderer=new THREE.WebGLRenderer();
