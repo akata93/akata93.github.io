@@ -149,7 +149,7 @@ raycaster=new THREE.Raycaster(malla.position,new THREE.Vector3(1,0,0));
 }
 
 function loop(){
-  
+  var or;
   obspared3=raycaster.intersectObject(Pared3);
   obspared2=raycaster.intersectObject(Pared2);
   obspared1=raycaster.intersectObject(Pared1);
@@ -158,23 +158,27 @@ function loop(){
   if ((obspared3.length>0) && (obspared3[0].distance<=25)){
     dir=2;
     raycaster.set(malla.position,new THREE.Vector3(0,0,1));
+    or=new THREE.Vector3(0,0,1);
     spotLight.position.set(malla.position,new THREE.Vector3(0,0,1));
   }
   
   if ((obspared1.length>0) && (obspared1[0].distance<=17)){
     dir=3;
     raycaster.set(malla.position,new THREE.Vector3(-1,0,0));
+    or=new THREE.Vector3(-1,0,0);
     spotLight.position.set(malla.position,new THREE.Vector3(-1,0,0));
   }
  if ((obspared4.length>0) && (obspared4[0].distance<=25)){
     dir=4;
     raycaster.set(malla.position,new THREE.Vector3(0,0,-1));
+    or=new THREE.Vector3(0,0,-1);
     spotLight.position.set(malla.position,new THREE.Vector3(0,0,-1));
   }
   
   if ((obspared2.length>0) && (obspared2[0].distance<=17)){
     dir=1;
     raycaster.set(malla.position,new THREE.Vector3(1,0,0));
+    or=new THREE.Vector3(1,0,0);
     spotLight.position.set(malla.position,new THREE.Vector3(1,0,0));
   }
 
@@ -205,7 +209,7 @@ camara.position.x =malla.position.x;
 				camara.position.z= malla.position.z;
 				camara.position.y = 20 ;  
 				camara.rotation.x=0;
-				camara.lookAt( malla.position );
+				camara.lookAt( or );
   if (keyboard.pressed("P")) {
     
     var timer = Date.now() * 0.0001;
