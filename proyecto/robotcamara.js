@@ -209,6 +209,8 @@ camara.position.x = Math.cos( timer ) * 200;
 				//camera.position.z = Math.sin( timer ) * 200;
 				camera.position.x =malla.position.x;
 				camera.position.z= malla.position.z;
+				camera.position.y = 100 ;  
+				camera.rotation.x=0;
 				camera.lookAt( malla.position );
   renderer.render(escena,camera);
   }
