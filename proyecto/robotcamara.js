@@ -130,10 +130,12 @@ spotLight.shadow.camera.fov = 30;
 escena.add( spotLight );
 
 camara=new THREE.PerspectiveCamera();
-//camara.position.z=1500;
-//camara.position.y = 600 ;
+camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
+camara.position.y = 900 ;  
 camara.rotation.x=-1.57;
-camara.position.y=600;  
+
+camera.position.y = 300 ;  
+camera.rotation.x=-1.57;
 
 
 renderer=new THREE.WebGLRenderer();
@@ -194,8 +196,22 @@ function loop(){
     malla.position.z-=step;
     malla.rotation.y=-180*(Math.PI)/180;
   }
+  var timer = Date.now() * 0.0001;
+
+camara.position.x = Math.cos( timer ) * 200;
+				camara.position.z = Math.sin( timer ) * 200;
+				camara.lookAt( escena.position );
+  if (keyboard.pressed("P")) {
+    
+    var timer = Date.now() * 0.0001;
+
+				camera.position.x = Math.cos( timer ) * 200;
+				camera.position.z = Math.sin( timer ) * 200;
+				camera.lookAt( escena.position );
+  renderer.render(escena,camera);
+  }
+  else renderer.render(escena,camara);
  
-  renderer.render(escena,camara);
   requestAnimationFrame(loop);
 }
   
@@ -206,6 +222,7 @@ var dir;
 var Pared1,Pared2,Pared3,Pared4;
 var obspared1,obspared2,obspared3,obspared4;
 var basecuadro= new Array();
+var keyboard = new THREEx.KeyboardState();
 dir=1;
 setup();
 loop();
