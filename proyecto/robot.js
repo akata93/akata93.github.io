@@ -157,15 +157,15 @@ function loop(){
   else if(dir==4){
     malla.position.z-=step;
   }
+camara.position.x = Math.cos( timer ) * 200;
+				camara.position.z = Math.sin( timer ) * 200;
+				camara.lookAt( escena.position );
   if (keyboard.pressed("P")) {
     
-    var timer = Date.now() * 0.001;
-
-				//camera.position.x = malla.position.x+100;
-				
-				//camera.position.z = malla.position.z+100;
-				//camera.rotation.y=Math.sin( timer )*10 ;
-				//camera.rotation.y = Math.sin( timer ) * 200*0.1;
+    
+				camera.position.x = Math.cos( timer ) * 200;
+				camera.position.z = Math.sin( timer ) * 200;
+				camera.lookAt( escena.position );
   renderer.render(escena,camera);
   }
   else renderer.render(escena,camara);
