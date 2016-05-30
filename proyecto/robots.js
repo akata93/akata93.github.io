@@ -12,19 +12,19 @@ function Robot(size,x,y){
 	var material = new THREE.MeshBasicMaterial({map: textura });
 
 	var figurabasepie=new THREE.Shape();
-	figurabasepie.moveTo(0.08,-0.35);
-	figurabasepie.lineTo(0.05,-0.32);
-	figurabasepie.lineTo(-0.05,-0.32);
-	figurabasepie.lineTo(-0.08,-0.35);
-	figurabasepie.lineTo(0.08,-0.35);
+	figurabasepie.moveTo(8,-35);
+	figurabasepie.lineTo(5,-32);
+	figurabasepie.lineTo(-5,-32);
+	figurabasepie.lineTo(-8,-35);
+	figurabasepie.lineTo(8,-35);
 	  
-	var formabasepie=new THREE.ExtrudeGeometry(figurabasepie, {amount:0.10});
+	var formabasepie=new THREE.ExtrudeGeometry(figurabasepie, {amount:10});
 	  
-	var brazo1 = new THREE.CylinderGeometry( 0.04, 0.04, 0.5, 1 );
-	var brazo2 = new THREE.CylinderGeometry( 0.04, 0.04, 0.5, 1 );
-	var cabezaForma=new THREE.SphereGeometry(0.15, 1, 1);
-	var cuerpoForma=new THREE.CylinderGeometry(0.15, 0.15, 0.40, 1, 0.10);
-	var pie1Forma=new THREE.CylinderGeometry(0.05, 0.05, 0.10, 1, 0.10);
+	var brazo1 = new THREE.CylinderGeometry( 4, 4, 50, 100 );
+	var brazo2 = new THREE.CylinderGeometry( 4, 4, 50, 100 );
+	var cabezaForma=new THREE.SphereGeometry(15, 100, 100);
+	var cuerpoForma=new THREE.CylinderGeometry(15, 15, 40, 100, 10);
+	var pie1Forma=new THREE.CylinderGeometry(5, 5, 10, 100, 10);
 
 	var cabeza= new THREE.Mesh(cabezaForma,material);
 	var cuerpo= new THREE.Mesh(cuerpoForma,material);
@@ -33,12 +33,13 @@ function Robot(size,x,y){
 	var mallabrazo1= new THREE.Mesh(brazo1,material);
 	var mallabrazo2= new THREE.Mesh(brazo2,material);
 
-	cabeza.position.y=0.20;
-	pie1.position.y=-0.25;
-	mallabrazo1.position.x=0.18;
-	mallabrazo2.position.x=-0.18;
-	mallabrazo1.position.y=-0.10;
-	mallabrazo2.position.y=-0.10;
+	cabeza.position.y=20;
+	pie1.position.y=-25;
+	mallabrazo1.position.x=18;
+	mallabrazo2.position.x=-18;
+	mallabrazo1.position.y=-10;
+	mallabrazo2.position.y=-10;
+
 
 	var forma= new THREE.Geometry();
 
@@ -48,8 +49,8 @@ function Robot(size,x,y){
 	THREE.GeometryUtils.merge(forma,formabasepie);
 	THREE.GeometryUtils.merge(forma,mallabrazo1);
 	THREE.GeometryUtils.merge(forma,mallabrazo2);
-
-
+	forma.scale.x = forma.scale.y = forma.scale.z = 0.006;
+	forma.updateMatrix();
 
 	this.sensor=new Sensor();
 	this.actuator= new THREE.Mesh(forma,material);
