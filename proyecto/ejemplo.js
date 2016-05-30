@@ -2,7 +2,7 @@ function Wall(size,x,y){
   THREE.Mesh.call(this, new THREE.BoxGeometry(size,size,size), new THREE.MeshNormalMaterial());
   this.size=size;
   this.position.x=x;
-  this.position.y=y;
+  this.position.z=y;
 }
  
 Wall.prototype= new THREE.Mesh();
@@ -49,7 +49,7 @@ THREE.ImageUtils.crossOrigin='';
   environment = new Environment();
   environment.setMap(mapa);
   camera=new THREE.PerspectiveCamera();
-  camera.position.z=30;
+  camera.position.y=30;
   renderer= new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
