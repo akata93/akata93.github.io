@@ -49,7 +49,7 @@ THREE.ImageUtils.crossOrigin='';
   environment = new Environment();
   environment.setMap(mapa);
   camera=new THREE.PerspectiveCamera();
-  camera.position.y=20;
+  camera.position.y=30;
   camera.rotation.x=-1.57;
   renderer= new THREE.WebGLRenderer();
   renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
