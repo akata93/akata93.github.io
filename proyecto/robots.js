@@ -65,8 +65,8 @@ Robot.prototype=new Agent();
 Robot.prototype.sense=function(environment){
 	this.sensor.set(this.position,
 		new THREE.Vector3(Math.cos(this.rotation.y),
-			Math.sin(this.rotation.y),
-			0));
+			0,
+			Math.sin(this.rotation.y)));
 	var obstaculo=this.sensor.intersectObjects(environment.children,true);
 
 	if((obstaculo.length > 0 &&
