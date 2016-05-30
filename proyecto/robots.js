@@ -55,6 +55,7 @@ function Robot(size,x,y){
 	this.sensor=new Sensor();
 	this.actuator= new THREE.Mesh(forma,material);
 	this.actuator.scale.set(0.02,0.02,0.02);
+	this.actuator.rotation.y=-90*(Math.PI)/180;
 	this.actuator.commands=[];
 	this.add(this.actuator);
 }
