@@ -50,7 +50,7 @@ function Robot(size,x,y){
 	THREE.GeometryUtils.merge(forma,mallabrazo1);
 	THREE.GeometryUtils.merge(forma,mallabrazo2);
 	forma.scale.x = forma.scale.y = forma.scale.z = 0.006;
-	forma.updateMatrix();
+	//forma.updateMatrix();
 
 	this.sensor=new Sensor();
 	this.actuator= new THREE.Mesh(forma,material);
