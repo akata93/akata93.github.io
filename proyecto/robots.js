@@ -69,7 +69,7 @@ Robot.prototype.sense=function(environment){
 	var obstaculo=this.sensor.intersectObjects(environment.children,true);
 
 	if((obstaculo.length > 0 &&
-	(obstaculo[0].distance<=.5)))
+	(obstaculo[0].distance<=0.05)))
 		this.sensor.colision=true;
 	else
 		this.sensor.colision=false;
