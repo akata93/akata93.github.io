@@ -63,8 +63,8 @@ Robot.prototype=new Agent();
 
 Robot.prototype.sense=function(environment){
 	this.sensor.set(this.position,
-		new THREE.Vector3(Math.cos(this.rotation.z),
-			Math.sin(this.rotation.z),
+		new THREE.Vector3(Math.cos(this.rotation.y),
+			Math.sin(this.rotation.y),
 			0));
 	var obstaculo=this.sensor.intersectObjects(environment.children,true);
 
@@ -98,17 +98,17 @@ Robot.prototype.operations.goStraight= function(robot,distance){
   if (distance===undefined)
   distance=0.05;
   robot.position.x+=distance*Math.cos(robot.rotation.z);
-  robot.position.y+=distance*Math.sin(robot.rotation.z);
+  robot.position.z+=distance*Math.sin(robot.rotation.z);
 };
 
 Robot.prototype.operations.rotateCW= function(robot,angle){
   if (angle===undefined)
   angle=-Math.PI/2;
-  robot.rotation.z+=angle;
+  robot.rotation.y+=angle;
 };
 
 Robot.prototype.operations.rotateCCW= function(robot,angle){
   if (angle===undefined)
   angle=Math.PI/2;
-  robot.rotation.z+=angle;
+  robot.rotation.y+=angle;
 };
