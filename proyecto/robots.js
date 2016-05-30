@@ -69,7 +69,7 @@ Robot.prototype.sense=function(environment){
 	var obstaculo=this.sensor.intersectObjects(environment.children,true);
 
 	if((obstaculo.length > 0 &&
-	(obstaculo[0].distance<=0.05)))
+	(obstaculo[0].distance<=0.1)))
 		this.sensor.colision=true;
 	else
 		this.sensor.colision=false;
@@ -97,8 +97,8 @@ Robot.prototype.operations={ };
 Robot.prototype.operations.goStraight= function(robot,distance){
   if (distance===undefined)
   distance=0.05;
-  robot.position.x+=distance*Math.cos(robot.rotation.z);
-  robot.position.z+=distance*Math.sin(robot.rotation.z);
+  robot.position.x+=distance*Math.cos(robot.rotation.y);
+  robot.position.z+=distance*Math.sin(robot.rotation.y);
 };
 
 Robot.prototype.operations.rotateCW= function(robot,angle){
