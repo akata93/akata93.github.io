@@ -1,7 +1,7 @@
 function Agent (x=0, y=0){
 	THREE.Object3D.call(this);
 	this.position.x=x;
-	this.position.y=y;
+	this.position.z=y;
 }
 
 Agent.prototype=new THREE.Object3D();
