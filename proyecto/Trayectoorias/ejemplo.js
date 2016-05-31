@@ -102,7 +102,7 @@ THREE.ImageUtils.crossOrigin='';
   
   
   renderer= new THREE.WebGLRenderer();
-  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+  renderer.setSize(window.innerHeight,window.innerHeight);
   document.body.appendChild(renderer.domElement);
   
   environment.add(camera);
