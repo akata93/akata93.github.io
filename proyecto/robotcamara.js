@@ -139,7 +139,7 @@ camera.rotation.x=-1.57;
 
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
+renderer.setSize(window.innerHeight,window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 step=0.8;
