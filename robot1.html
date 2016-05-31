@@ -128,6 +128,9 @@ escena.add(Pared2);
 escena.add(Pared3);
 escena.add(Pared4);
 
+var light = new THREE.AmbientLight( 0xffffff ); // soft white light
+escena.add( light );
+
 //Se inicializa la cámara y el renderer
 
 camara=new THREE.PerspectiveCamera();
