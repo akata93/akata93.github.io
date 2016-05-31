@@ -134,6 +134,8 @@ camara=new THREE.PerspectiveCamera();
 //camara.position.y = 600 ;
 camara.rotation.x=-1.57;
 camara.position.y=600;  
+var light = new THREE.AmbientLight( 0xffffff ); // soft white light
+escena.add( light );
 
 
 renderer=new THREE.WebGLRenderer();
