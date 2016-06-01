@@ -62,8 +62,8 @@ function Robot (size, x,y){
   this.luz.position.y += -1;
   this.luz.target.position.set(0,0,0);
   this.actuator= new THREE.Mesh(forma,material);
-  this.actuator.scale.set(0.04,0.04,0.04);
-  this.actuator.rotation.y=-90*(Math.PI)/180;
+  this.actuator.scale.set(0.02,0.02,0.02);
+  this.actuator.rotation.z=-90*(Math.PI)/180;
   this.actuator.commands=[];
   this.add(this.actuator);
   this.add(this.luz);
